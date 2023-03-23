@@ -7,11 +7,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents:
-        write
-        workflows
+      contents: write
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{secrets.DHALL_CI_TEST}}
       - uses: dhall-lang/setup-dhall@v4
         with:
           version: '1.28.0'
