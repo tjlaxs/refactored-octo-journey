@@ -15,7 +15,12 @@ jobs:
       - uses: dhall-lang/setup-dhall@v4
         with:
           version: '1.28.0'
+      - uses: tj-actions/changed-files@v35.7.6
+        id: changed-workflow-files
+        with:
+          files: workflows/**
       - run: dhall version
+      - run: echo -e ${{steps.changed-workflow-files.outputs.modified_files}}
       - run: dhall-to-yaml --file workflows/main.dhall > .github/workflows/main.yml
       - run: |
           git config --global user.email "robot@example.com"
