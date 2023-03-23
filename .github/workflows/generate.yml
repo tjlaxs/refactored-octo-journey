@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      workflows/
+      - workflows/
 jobs:
   build:
     runs-on: ubuntu-latest
