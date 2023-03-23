@@ -1,0 +1,10 @@
+jobs:
+  hw:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "echo 'Hello, World! Plop'"
+name: Jsonify
+on:
+  push:
+    paths:
+      - "src/**"
