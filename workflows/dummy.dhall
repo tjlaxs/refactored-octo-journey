@@ -3,7 +3,7 @@ let GithubActions = https://regadas.dev/github-actions-dhall/package.dhall
 in GithubActions.Workflow::{
 , name = "HelloWorld"
 , on = GithubActions.On::{
-  , workflow_dispatch = Some GithubActions.WorkflowDispatch::{=}
+  , push = Some GithubActions.Push::{=}
   }
 , jobs = toMap
   { hw = GithubActions.Jobs::{
