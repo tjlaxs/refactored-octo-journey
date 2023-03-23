@@ -7,8 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: dhall-lang/setup-dhall@v4
         with:
           version: '1.28.0'
       - run: dhall version
-      - run: dhall-to-yaml --version
+      - run: dhall-to-yaml workflows/main.dhall
