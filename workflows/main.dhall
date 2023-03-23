@@ -9,7 +9,7 @@ let helloWorld =
 let echo =
       GithubActions.steps.echo
         { name = "Echo the greeting's time"
-        , what = "'The time was \${{ steps.hello.outputs.time }}.'"
+        , what = "'The time was \${{ steps.hello.outputs.time }}. Plop.'"
         }
 
 in  GithubActions.Workflow::{
