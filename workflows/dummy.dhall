@@ -9,7 +9,7 @@ in GithubActions.Workflow::{
   { hw = GithubActions.Jobs::{
     , runs-on = GithubActions.types.RunsOn.ubuntu-latest
     , steps = [ GithubActions.steps.run
-      { run = "echo 'Hello, World!'" }
+      { run = "echo 'Hello, World! Plop.'" }
     ]
     }
   }
