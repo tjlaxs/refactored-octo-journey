@@ -7,7 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents:
+        write
+        workflows
     steps:
       - uses: actions/checkout@v3
       - uses: dhall-lang/setup-dhall@v4
@@ -15,4 +17,7 @@ jobs:
           version: '1.28.0'
       - run: dhall version
       - run: dhall-to-yaml --file workflows/main.dhall > .github/workflows/main.yml
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - run: |
+          git add .github/workflows/main.yml
+          git commit -m "Change in dhall workflow"
+          git push
