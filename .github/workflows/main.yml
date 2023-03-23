@@ -11,4 +11,4 @@ jobs:
         run: "echo 'The time was ${{ steps.hello.outputs.time }}. Plop.'"
 name: Greeting
 on:
-  push: {}
+  workflow_dispatch: {}
