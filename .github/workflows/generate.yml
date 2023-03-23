@@ -13,8 +13,6 @@ jobs:
         with:
           token: ${{secrets.DHALL_CI_TEST}}
       - uses: dhall-lang/setup-dhall@v4
-        with:
-          version: '1.28.0'
       - uses: tj-actions/changed-files@v35.7.6
         id: changed-workflow-files
         with:
