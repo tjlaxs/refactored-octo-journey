@@ -12,4 +12,5 @@ jobs:
         with:
           version: '1.28.0'
       - run: dhall version
-      - run: dhall-to-yaml --file workflows/main.dhall
+      - run: dhall-to-yaml --file workflows/main.dhall > .github/workflows/main.yml
+      - run: ls -la
