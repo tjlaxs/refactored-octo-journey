@@ -14,7 +14,7 @@ let echo =
 
 in  GithubActions.Workflow::{
     , name = "Greeting"
-    , on = GithubActions.On::{ push = Some GithubActions.Push::{=} }
+    , on = GithubActions.On::{ workflow_dispatch = Some GithubActions.WorkflowDispatch::{=} }
     , jobs = toMap
         { build = GithubActions.Job::{
           , name = Some "Greeting"
