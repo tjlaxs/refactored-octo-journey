@@ -1,1 +1,1 @@
-{ foobar = "test" }
+{ foobar = "testi" }
