@@ -1,3 +1,8 @@
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      workflows/
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -6,4 +11,4 @@ jobs:
         with:
           version: '1.28.0'
       - run: dhall version
-      - run: dhall-to-json --version
+      - run: dhall-to-yaml --version
