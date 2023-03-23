@@ -1,4 +1,4 @@
-let GithubActions = https://github.com/regadas/github-actions-dhall/blob/master/package.dhall
+let GithubActions = https://raw.githubusercontent.com/regadas/github-actions-dhall/master/package.dhall
 
 in GithubActions.Workflow::{
 , name = "HelloWorld"
