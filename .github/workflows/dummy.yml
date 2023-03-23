@@ -1,1 +1,8 @@
-foobar: testi
+jobs:
+  hw:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "echo 'Hello, World! Plop.'"
+name: HelloWorld
+on:
+  workflow_dispatch: {}
