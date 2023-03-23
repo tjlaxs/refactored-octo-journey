@@ -18,6 +18,8 @@ jobs:
       - run: dhall version
       - run: dhall-to-yaml --file workflows/main.dhall > .github/workflows/main.yml
       - run: |
+          git config --global user.email "robot@example.com"
+          git config --global user.name "Dhall Bot"
           git add .github/workflows/main.yml
           git commit -m "Change in dhall workflow"
           git push
