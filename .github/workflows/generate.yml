@@ -22,12 +22,12 @@ jobs:
       - run: dhall version
       - run: |
           for x in ${{steps.changed-workflow-files.outputs.modified_files}}; do
-            echo "'$x'"
+            curfile=(basename "$x" .dhall)
+            dhall-to-yaml --file workflows/$curfile.dhall > .github/workflows/$curfile.yml
           done
-      - run: dhall-to-yaml --file workflows/main.dhall > .github/workflows/main.yml
       - run: |
           git config --global user.email "robot@example.com"
           git config --global user.name "Dhall Bot"
-          git add .github/workflows/main.yml
+          git add .github/workflows/
           git commit -m "Change in dhall workflow"
           git push
